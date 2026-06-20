@@ -1,0 +1,242 @@
+:root{
+    --primaryColor: #1B263B;
+    --secondaryColor: #E0E1DD;
+    --lightColor: #778DA9;
+    --pgColor-1: #3e86d8;
+    --pgColor2: #E67E22;
+    --padding: 10px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--primaryColor);
+    color: var(--secondaryColor);
+}
+
+.home{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+span {
+    color: var(--pgColor2);
+}
+
+h2{
+    font-size: 2.5rem;
+    letter-spacing: 0.12rem;
+    cursor: pointer;
+    color: var(--secondaryColor);
+}
+
+nav{
+    padding: 2.8rem var(--padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.nav-icon{
+    position: absolute;
+    top: 210px;
+    right: 10px;
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+    background-color: rgba(230, 126, 34, 0.1);
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgba(230, 126, 34, 0.6);
+    transition: box-shadow 0.3s ease;
+}
+
+.nav-icon:hover{
+    box-shadow: 0 0 35px rgba(230, 126, 34, 0.8);
+}
+
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+nav ul li{
+    list-style-type: none;
+}
+
+nav ul li a{
+    color: var(--secondaryColor);
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover{
+    color: var(--pgColor2);
+}
+
+.btn{
+    background-color: var(--pgColor2);
+    color: var(--secondaryColor);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.81rem 1.87rem;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    transition: 0.4s ease;
+    width: max-content;
+}
+
+.btn:hover{
+    background-color: transparent;
+    border-color: var(--secondaryColor);
+    color: var(--secondaryColor);
+}
+
+.conte{
+    flex: 1;
+    padding: 0 var(--padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    bottom: 70px;
+    gap: 1rem;
+}
+
+h1{
+    font-size: 4.6rem;
+    margin-bottom: 1.7rem;
+}
+
+h3{
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    max-width: 640px;
+    line-height: 1.5;
+}
+
+h4{
+    font-size: 1.25rem;
+    letter-spacing: 0.12rem;
+    color: var(--secondaryColor);
+}
+
+.social{
+    margin-top: 3.5rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(224, 225, 221, 0.1);
+    transition: all 0.3s ease;
+}
+
+.social a:hover{
+    background-color: var(--pgColor2);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(230, 126, 34, 0.3);
+}
+
+.social img{
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    display: block;
+}
+
+.container-img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.clinic-pic{
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.clinic-pic:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(230, 126, 34, 0.2);
+}
+
+.doctor-icon{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(224, 225, 221, 0.15) 0%, rgba(224, 225, 221, 0.05) 100%);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(224, 225, 221, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+}
+
+.doctor-icon:hover{
+    transform: rotate(10deg) scale(1.05);
+    border-color: var(--pgColor2);
+    box-shadow: 0 12px 30px rgba(230, 126, 34, 0.2);
+}
+
+.profile-image{
+    display: none;
+}
+
+@media (max-width: 800px) {
+    nav{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.2rem;
+    }
+
+    .conte{
+        bottom: 0;
+    }
+
+    h1{
+        font-size: 3rem;
+    }
+
+    h3{
+        font-size: 1.2rem;
+    }
+
+    .container-img{
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
